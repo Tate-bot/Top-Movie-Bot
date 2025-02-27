@@ -15,20 +15,20 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', '')
-API_ID = int(environ.get('API_ID', '22505271'))
-API_HASH = environ.get('API_HASH', 'c89a94fcfda4bc06524d0903977fc81e')
-BOT_TOKEN = environ.get('BOT_TOKEN', "7339639307:AAGdsIoowuIxMB-t1LmwLx2UfgE6jg_xHJo")
+API_ID = int(environ.get('API_ID', '28810170'))
+API_HASH = environ.get('API_HASH', 'd8fa6697eb16406d15015179aa641fee')
+BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 # Bot settings
-CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
-PICS = (environ.get('PICS', 'https://graph.org/file/c54fdc8a5580bb801abc2.jpg https://telegra.ph/file/03efec694e41e891b29dc.jpg https://telegra.ph/file/e575ae40d6635250974e1.jpg')).split() #SAMPLE PIC
+CACHE_TIME = int(environ.get('CACHE_TIME', 300))
+PICS = (environ.get('PICS', '')).split() #SAMPLE PIC
 NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/b69af2db776e4e85d21ec.jpg")
-MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/c10c46e6255fe65d9eecc.jpg")
+MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/f21949470a124572485ad-9d08b9967e03d05676.jpg")
 SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/15c1ad448dfe472a5cbb8.jpg")
 
 # Admins, Channels & Users
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002027563292'))
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6695586027').split()]
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002284639395'))
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5560200410').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002027563292').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
